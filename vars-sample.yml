@@ -32,7 +32,7 @@ nginx:
 ## -- letsencrypt configuration -- ##
 letsencrypt:
   # this is the email address that will be used when registering domains that are flagged to be configured for ssl.
-  email: someemail@example.org
+  email: info@nashiraz.ir
 
 ## -- Logentries Configurations -- ##
 # If provided, and the logentries role is run for the playbook, then this will configure logentries.
@@ -43,7 +43,7 @@ logentries_logs:
   - name: "Nginx-Access"
     path: "/var/log/nginx/access.log"
 # optional. you don't need this. will default to ansible_fqdn
-logentries_hostname: my.host.com
+logentries_hostname: nashiraz.ir
 # optional. use existing logentries key set if you want to use it.
 logentries_set_key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
@@ -60,13 +60,13 @@ domains:
       install: multisite
       # WordPress Multisite installation network type. If not provided defaults to 'subdirectory'.
       network_type: subdomain
-      admin_user: username
+      admin_user: mehdi
       # plain_text you can change after site creation
-      admin_pass: admin_password
-      admin_email: email@address.com
+      admin_pass: 123qweA@
+      admin_email: info@nashiraz.ir
       # name to give the database for the site
-      db_name: named_for_db
-      site_title: Title for Site
+      db_name: db
+      site_title: Nevesht Afzar Shiraz
       ## -- wp_db_import --
       # Include the path to your sql import if you want to import.
       # by default these are not defined. Uncomment and fill with the the correct path to your local import file that will
@@ -110,7 +110,7 @@ webhook:
 
   # This represents email address associated with the user doing git commits from the buildmachine.  The webhook
   # listener will ignore any head commit notifications from git users with this email.
-  server_git_email: someemail@example.org
+  server_git_email: sahelefarda@gmail.com
 
   # This is the path on the server where your grunt build machine is configured. If you set up the grunt build-machine
   # using its role in this playbook (default paths) then you don't need to configure this and just leave it undefined
